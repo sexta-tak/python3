@@ -1,0 +1,12 @@
+version: '3'
+services:
+  python3:
+    build: .
+    container_name: 'python3'
+    network_mode: "host"
+    working_dir: '/root/'
+    tty: True
+    volumes:
+      - ./src:/root/src
+    environment:
+      DISPLAY: host.docker.internal:0.0
